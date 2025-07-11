@@ -1,4 +1,4 @@
-public class Quadrado extends FormaGeometrica {
+public class Quadrado extends Retangulo {
 
     private double lado;
 
