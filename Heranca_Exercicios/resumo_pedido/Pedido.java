@@ -28,14 +28,13 @@ public class Pedido {
         return this.percentualDesconto / 100 * valorTotalPedido;
     }
 
+    
     public void apresentarResumoPedido() {
-        StringBuilder stringBuilder = new StringBuilder(
-                "------- RESUMO PEDIDO -------\n"
-        );
+        System.out.println("------- RESUMO PEDIDO -------");
 
         for (ItemPedido item: itens) {
-            stringBuilder.append(
-                    String.format("Tipo: %s  Titulo: %s  Preco: %.2f  Quant: %d  Total: %.2f\n",
+            System.out.println(
+                    String.format("Tipo: %s  Titulo: %s  Preco: %.2f  Quant: %d  Total: %.2f",
                             item.getProduto().getClass().getSimpleName(),
                             item.getProduto().getTitulo(),
                             item.getProduto().obterPrecoLiquido(),
@@ -48,13 +47,11 @@ public class Pedido {
         double valorTotalProdutos = getValorTotalProdutos();
         double valorDesconto = getValorDesconto(valorTotalProdutos);
 
-        stringBuilder.append("----------------------------\n");
-        stringBuilder.append(String.format("DESCONTO: %.2f\n", valorDesconto));
-        stringBuilder.append(String.format("TOTAL PRODUTOS: %.2f\n", valorTotalProdutos));
-        stringBuilder.append("----------------------------\n");
-        stringBuilder.append(String.format("TOTAL PEDIDO: %.2f\n", calcularTotal()));
-        stringBuilder.append("----------------------------\n");
-
-        System.out.println(stringBuilder.toString());
+        System.out.println("----------------------------");
+        System.out.println(String.format("DESCONTO: %.2f", valorDesconto));
+        System.out.println(String.format("TOTAL PRODUTOS: %.2f", valorTotalProdutos));
+        System.out.println("----------------------------");
+        System.out.println(String.format("TOTAL PEDIDO: %.2f", calcularTotal()));
+        System.out.println("----------------------------");
     }
 }
