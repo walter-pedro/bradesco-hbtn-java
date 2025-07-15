@@ -19,11 +19,11 @@ public class PersonagemGame {
         this.nome = nome;
     }
 
-    public void tomarDano(int quantidadeDano) {
-        if (this.saudeAtual - quantidadeDano < 0) {
+    public void tomarDano(int quantidadeDeDano) {
+        if (this.saudeAtual - quantidadeDeDano < 0) {
             this.saudeAtual = 0;
         } else {
-            this.saudeAtual -= quantidadeDano;
+            this.saudeAtual -= quantidadeDeDano;
         }
     }
 
