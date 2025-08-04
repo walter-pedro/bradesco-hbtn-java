@@ -23,7 +23,7 @@ public class CsvFileReader {
             throw new RuntimeException(e);
         }
 
-        System.out.println("Leitura Concluída.");
+        System.out.println("Leitura do arquivo concluída.");
     }
 
     private static void imprimirFuncionario(String[] linha) {
