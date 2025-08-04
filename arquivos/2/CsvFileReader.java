@@ -20,7 +20,7 @@ public class CsvFileReader {
         System.out.println("Salarial: Salarial");
         System.out.println(SEPARADOR);
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("./arquivos/a2/funcionarios.csv"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("./funcionarios.csv"))) {
             String linha;
             while ((linha = reader.readLine()) != null) {
                 imprimirFuncionario(linha.split(","));
