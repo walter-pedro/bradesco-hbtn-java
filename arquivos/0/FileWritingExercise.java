@@ -17,17 +17,16 @@ public class FileWritingExercise {
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
             String entrada = "";
-
-            while (!entrada.equalsIgnoreCase("sair")) {
+            do {
                 System.out.print("Digite uma frase para entrar no arquivo: ");
                 entrada = scanner.nextLine();
                 if (!entrada.equalsIgnoreCase("sair")) {
                     writer.write(entrada);
-                    writer.newLine();
+                    writer.newLine(); // adiciona quebra de linha
                 } else {
                     break;
                 }
-            }
+            } while (!entrada.equalsIgnoreCase("sair"));
 
             System.out.println("Arquivo foi criado e o conteúdo salvo com sucesso.");
 
