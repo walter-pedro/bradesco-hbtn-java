@@ -14,12 +14,6 @@ public class CsvFileReader {
 
     public static void main(String[] args) {
 
-        System.out.println("Funcionário: Nome");
-        System.out.println("Idade: Idade");
-        System.out.println("Departamento: Departamento");
-        System.out.println("Salarial: Salarial");
-        System.out.println(SEPARADOR);
-
         try (BufferedReader reader = new BufferedReader(new FileReader("./funcionarios.csv"))) {
             String linha;
             while ((linha = reader.readLine()) != null) {
