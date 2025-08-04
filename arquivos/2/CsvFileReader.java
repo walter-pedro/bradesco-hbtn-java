@@ -23,7 +23,7 @@ public class CsvFileReader {
         try (BufferedReader reader = new BufferedReader(new FileReader("./arquivos/a2/funcionarios.csv"))) {
             String linha;
             while ((linha = reader.readLine()) != null) {
-                imprimirFuncionario(linha);
+                imprimirFuncionario(linha.split(","));
             }
         } catch (IOException e) {
             throw new RuntimeException(e);

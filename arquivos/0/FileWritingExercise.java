@@ -23,7 +23,7 @@ public class FileWritingExercise {
                 entrada = scanner.nextLine();
                 if (!entrada.equalsIgnoreCase("sair")) {
                     writer.write(entrada);
-                    writer.newLine(); // adiciona quebra de linha
+                    writer.newLine();
                 } else {
                     break;
                 }
@@ -33,7 +33,7 @@ public class FileWritingExercise {
 
         } catch (IOException e) {
             System.out.println("Erro ao escrever no arquivo:");
-            e.printStackTrace(); // imprime o erro completo
+            e.printStackTrace();
         }
 
         scanner.close();

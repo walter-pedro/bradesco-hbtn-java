@@ -19,7 +19,8 @@ public class Estoque {
     List<Produto> produtos = new ArrayList<Produto>();
 
     private void lerArquivo() {
-        try (Stream<String> linhas = Files.lines(this.path)) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(this.path.toFile()))) {
+            Stream<String> linhas = reader.lines();
             this.produtos = linhas
                     .map(Estoque::mapToProduto)
                     .collect(Collectors.toList());
@@ -29,13 +30,12 @@ public class Estoque {
     }
 
     private void gravarArquivo() {
-        try (BufferedWriter writer = Files.newBufferedWriter(this.path)) {
+        try (FileWriter writer = new FileWriter(this.path.toFile())) {
             this.produtos.stream()
                     .map(p -> String.format("%d, %s, %.2f, %d", p.getId(), p.getNome(), p.getPreco(), p.getQuantidade()))
                     .forEach(linha -> {
                         try {
-                            writer.write(linha);
-                            writer.newLine();
+                            writer.write(linha + "\n");
                         } catch (IOException e) {
                             throw new RuntimeException(e);
                         }
