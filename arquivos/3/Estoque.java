@@ -47,8 +47,8 @@ public class Estoque {
         String[] campos = linha.split(",");
         return new Produto(Integer.parseInt(campos[0]),
                 campos[1],
-                Integer.parseInt(campos[3]),
-                Double.parseDouble(campos[2]));
+                Integer.parseInt(campos[2]),
+                Double.parseDouble(campos[3]));
     }
 
     public void adicionarProduto(String nome, int quantidade, double preco) {
