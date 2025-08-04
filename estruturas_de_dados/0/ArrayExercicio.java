@@ -1,5 +1,3 @@
-package estruturas_de_dados.a0;
-
 import java.util.Scanner;
 
 

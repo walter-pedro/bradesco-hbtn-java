@@ -1,5 +1,3 @@
-package estruturas_de_dados.a1;
-
 public class Aluno {
 
     String nome;
