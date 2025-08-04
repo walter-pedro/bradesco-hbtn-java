@@ -20,7 +20,13 @@ public class GerenciamentoDeContatos {
         contato.adicionarTelefone(telefone);
         contato.adicionarEmail(email);
 
-        contatos.put(nome, contato);
+        Contato contatoAdicionado = contatos.put(nome, contato);
+
+        if (contatoAdicionado != null) {
+            System.out.printf("Contato %s adicionado com sucesso!\n", nome);
+        } else {
+            System.out.printf("Erro: Contato com nome %s já existe!\n", nome);
+        }
     }
 
 
