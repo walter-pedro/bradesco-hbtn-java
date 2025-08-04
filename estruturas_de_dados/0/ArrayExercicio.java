@@ -24,7 +24,9 @@ public class ArrayExercicio {
             int numero = scanner.nextInt();
             numeros[i] = numero;
             soma += numero;
-            maiorNumero = Math.max(maiorNumero, numero);
+            if(numero > maiorNumero) {
+                maiorNumero = numero;
+            }            
         }
 
         // Exibindo os resultados
