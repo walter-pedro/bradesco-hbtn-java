@@ -20,8 +20,11 @@ public class CsvFileReader {
         System.out.println("Salarial: Salarial");
         System.out.println(SEPARADOR);
 
-        try (Stream<String> linhas = Files.lines(Path.of("./funcionarios.csv"))) {
-            linhas.forEach(linha -> imprimirFuncionario(linha.split(",")));
+        try (BufferedReader reader = new BufferedReader(new FileReader("./arquivos/a2/funcionarios.csv"))) {
+            String linha;
+            while ((linha = reader.readLine()) != null) {
+                imprimirFuncionario(linha);
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

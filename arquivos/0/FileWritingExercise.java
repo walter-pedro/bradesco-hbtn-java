@@ -24,6 +24,8 @@ public class FileWritingExercise {
                 if (!entrada.equalsIgnoreCase("sair")) {
                     writer.write(entrada);
                     writer.newLine(); // adiciona quebra de linha
+                } else {
+                    break;
                 }
             }
 
