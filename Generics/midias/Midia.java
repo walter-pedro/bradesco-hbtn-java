@@ -1,5 +1,8 @@
 public class Midia {
 
+    public Midia() {
+    }
+
     public Midia(String nome) {
         this.nome = nome;
     }
