@@ -20,11 +20,11 @@ public class FileWritingExercise {
             do {
                 System.out.print("Digite uma frase para entrar no arquivo: ");
                 entrada = scanner.nextLine();
-                if (!entrada.equalsIgnoreCase("sair")) {
+                if (entrada.equalsIgnoreCase("sair")) {
+                    break;
+                } else {
                     writer.write(entrada);
                     writer.newLine(); // adiciona quebra de linha
-                } else {
-                    break;
                 }
             } while (!entrada.equalsIgnoreCase("sair"));
 
