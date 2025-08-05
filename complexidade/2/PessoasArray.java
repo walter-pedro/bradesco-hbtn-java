@@ -21,7 +21,7 @@ public class PessoasArray {
     public void buscaBinaria(String nome){
         boolean encontrado = false;
 
-        System.out.printf("Procurando pelo nome: \"%s\"\n", nome);
+        System.out.printf("Procurando o nome: \"%s\"\n", nome);
 
         int indiceInicial = 0;
         int indiceFinal = nomes.length - 1;
