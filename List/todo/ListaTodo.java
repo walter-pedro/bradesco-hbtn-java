@@ -8,7 +8,7 @@ public class ListaTodo {
 
     public void adicionarTarefa(Tarefa tarefa) {
         if (tarefas.stream().anyMatch(t -> t.getIdentificador() == tarefa.getIdentificador())) {
-            throw new RuntimeException(String.format("Tarefa com identificador %s ja existente na lista", tarefa.getIdentificador()));
+            throw new IllegalArgumentException(String.format("Tarefa com identificador %s ja existente na lista", tarefa.getIdentificador()));
         }
 
         tarefas.add(tarefa);
