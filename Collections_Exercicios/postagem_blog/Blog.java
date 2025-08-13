@@ -33,7 +33,7 @@ public class Blog {
         postList.sort(Comparator.comparing(Post::getTitulo));
 
         return postList.stream()
-                .filter(p -> p.getAutor() == autor)
+                .filter(p -> p.getAutor().toString().equals(autor.toString()))
                 .collect(Collectors.toCollection(LinkedHashSet::new));
     }
 

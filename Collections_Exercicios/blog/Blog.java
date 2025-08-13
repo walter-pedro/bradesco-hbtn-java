@@ -7,7 +7,7 @@ public class Blog {
         postList = new ArrayList<Post>();
     }
 
-    List<Post> postList;
+    private List<Post> postList;
 
     public void adicionarPostagem(Post post) {
         postList.add(post);
