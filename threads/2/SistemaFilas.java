@@ -14,10 +14,8 @@ public class SistemaFilas {
         consumidor1.start();
         consumidor2.start();
 
-        long duracao = 20000; // 20 segundos
-
         try {
-            Thread.sleep(duracao); // A thread principal espera
+            Thread.sleep(20000); // A thread principal espera
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
