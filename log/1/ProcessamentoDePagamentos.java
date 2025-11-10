@@ -32,7 +32,7 @@ public class ProcessamentoDePagamentos {
                     break;
                 }
                 case "Pendente": {
-                    logger.error(String.format("Pagamento %d está pendente. Aguardando confirmação.", i+1));
+                    logger.warn(String.format("Pagamento %d está pendente. Aguardando confirmação.", i+1));
                     break;
                 }
             }
